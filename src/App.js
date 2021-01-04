@@ -1,17 +1,18 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import { Toys } from '@material-ui/icons';
 import Copyright from './_components/Copyright';
-import Catalog from './_containers/Catalog';
 import { useStyles } from './styles';
 import Routing from './_components/routing';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import {
+  AppBar,
+  Button,
+  Container,
+  CssBaseline,
+  Grid,
+  Toolbar,
+  Typography,
+} from '@material-ui/core';
 
 function App() {
   let history = useHistory();

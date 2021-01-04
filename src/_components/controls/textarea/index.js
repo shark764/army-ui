@@ -2,7 +2,7 @@ import { TextField } from '@material-ui/core';
 import React from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
 
-function FormInput(props) {
+function FormTextarea(props) {
   const { control } = useFormContext();
   const { name, label } = props;
 
@@ -14,9 +14,11 @@ function FormInput(props) {
       defaultValue=""
       label={label}
       fullWidth={true}
+      multiline
+      rows={4}
       {...props}
     />
   );
 }
 
-export default FormInput;
+export default FormTextarea;
