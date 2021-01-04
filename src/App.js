@@ -10,8 +10,11 @@ import { Toys } from '@material-ui/icons';
 import Copyright from './_components/Copyright';
 import Catalog from './_containers/Catalog';
 import { useStyles } from './styles';
+import Routing from './_components/routing';
+import { Redirect, useHistory } from 'react-router-dom';
 
 function App() {
+  let history = useHistory();
   const classes = useStyles();
 
   return (
@@ -49,12 +52,20 @@ function App() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => history.push('/register')}
+                  >
                     Register a weapon
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={() => history.push('/')}
+                  >
                     Ok, I&apos;ll buy one
                   </Button>
                 </Grid>
@@ -63,7 +74,7 @@ function App() {
           </Container>
         </div>
 
-        <Catalog />
+        <Routing />
       </main>
 
       <footer className={classes.footer}>

@@ -11,6 +11,7 @@ import { textTruncate } from '../../../utils';
 
 function Weapon({ weapon }) {
   const classes = useStyles();
+  console.log(weapon);
 
   return (
     <Grid item xs={12} sm={6} md={4}>
